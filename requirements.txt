@@ -1,1 +1,6 @@
-django==3.2.16
+asgiref==3.7.2
+Django==3.2.16
+pytz==2024.1
+ruff==0.3.2
+sqlparse==0.4.4
+typing_extensions==4.10.0
