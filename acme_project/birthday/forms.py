@@ -1,7 +1,13 @@
 from django import forms
 
+from .models import Birthday
 
-class BirthdayForm(forms.Form):
-    first_name = forms.CharField()
-    last_name = forms.CharField()
-    birthday = forms.DateField()
+
+class BirthdayForm(forms.ModelForm):
+
+    class Meta:
+        model = Birthday
+        fields = '__all__'
+        widgets = {
+            'birthday': forms.DateInput(attrs={'type': 'date'})
+        }
