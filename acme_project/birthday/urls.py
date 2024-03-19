@@ -14,4 +14,9 @@ urlpatterns = [
     # path("<int:pk>/delete/", views.delete_birthday, name="delete"),
     path("<int:pk>/delete/", views.BirthdayDeleteView.as_view(), name="delete"),
     path("<int:pk>/", views.BirthdayDetailView.as_view(), name="detail"),
+    path(
+        "<int:pk>/comment/",
+        views.CongratulationCreateView.as_view(),
+        name="add_comment",
+    ),
 ]
