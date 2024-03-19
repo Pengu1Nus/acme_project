@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "birthday.apps.BirthdayConfig",
     "pages.apps.PagesConfig",
+    "core.apps.CoreConfig",
     "django_bootstrap5",
 ]
 
@@ -93,3 +94,5 @@ EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 # Указываем директорию, в которую будут сохраняться файлы писем:
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
 LOGIN_REDIRECT_URL = "pages:homepage"
+LOGIN_URL = "login"
+CSRF_FAILURE_VIEW = "core.views.csrf_failure"
